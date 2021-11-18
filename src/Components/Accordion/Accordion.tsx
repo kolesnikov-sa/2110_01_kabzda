@@ -1,13 +1,25 @@
 import React from "react";
 
 type AccordionPropsType = {
+    /**
+     * Title of Accordion
+     */
     title: string;
+    /**
+     * Trigger to make Accordion collapsed or expanded
+     */
     collapsed: boolean;
+    /**
+     * Callback function to collapse or expand the Accordion
+     */
     onClick: (value: boolean) => void;
 }
 
 // Version 2 refactored
-function Accordion(props: AccordionPropsType) {
+/**
+ * Accordion block from React Kabzda project
+ */
+export const Accordion = (props: AccordionPropsType) => {
     return (
         <div>
             <AccordionTitle title={props.title} collapsed={props.collapsed} onClick={props.onClick}/>
@@ -55,5 +67,3 @@ function AccordionBody() {
         </ul>
     );
 }
-
-export default Accordion;
